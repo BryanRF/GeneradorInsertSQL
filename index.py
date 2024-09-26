@@ -55,7 +55,7 @@ def generate_insert_statement(table_name, columns, num_rows=1):
             is_pk = column.get('pk', False)
             
             # Si el campo es nullable, existe una probabilidad de que el valor sea NULL
-            if nullable and random.random() < 0.2:  # 20% de probabilidad de que sea NULL
+            if nullable and random.random() < 1:  # 20% de probabilidad de que sea NULL
                 values.append("NULL")
             else:
                 if col_type == 'string':
